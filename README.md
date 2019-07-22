@@ -5,6 +5,8 @@ Log all DNS query records in your computer.
 - [ ] Implement a simple WebUI
 - [ ] Support more databases
 
+## Requirement
+You may need install libpcap (On UNIX/Linux) or winpcap (On Windows). 
 ## Output Mode
 * standard output
 * json format file. The filename is just like this: `PREFIX-2019-07-22`
