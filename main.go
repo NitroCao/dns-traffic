@@ -18,10 +18,6 @@
 package main
 
 import (
-	_ "net/http/pprof"
-
-	"net/http"
-
 	"github.com/google/gopacket/pcap"
 	"gopkg.in/urfave/cli.v1"
 	"log"
@@ -59,9 +55,6 @@ func main() {
 	app.Version = "v0.1.0"
 	app.Commands = commands
 
-	go func() {
-		log.Println(http.ListenAndServe("localhost:6060", nil))
-	}()
 	err = app.Run(os.Args)
 	if err != nil {
 		log.Fatal(err)
